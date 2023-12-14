@@ -127,16 +127,16 @@
                                 <button style = "padding: 0;"class = "boton-borrar" type = "submit">Eliminar</button>
                             </form>
                         </td>
-                        <td>Editar<?php  ?></td>
+                        <td onClick = "mostrarFormActualizar()">Editar<?php  ?></td>
                     </tr>
                 <?php }?> 
             </table>
         </div>
 
         <!-- Formulario para actualizar, escondido -->
-        <div id ="contenedor-absoluto" style = "display: block; position: absolute; top: 0; left: 0; background-color: grey; width: 100%; height: 100%;">
+        <div id ="contenedor-absoluto" style = "display: none; position: absolute; top: 0; left: 0; background-color: grey; width: 100%; height: 100%;">
            <div style = "background-color: white; width: fit-content; padding: 50px; margin: 0 auto;">
-                    <form action = "guardarEmpleado.php" method = "POST">
+                    <form action = "actualizarEmpleado.php" method = "POST">
                         <div>
                             <div>
                                 <div><p>Clave</p></div>
@@ -163,6 +163,9 @@
         </div>
         <script>
             function mostrarFormActualizar(){
+                var contenedorAbsoluto = document.getElementById("contenedor-absoluto");
+                contenedorAbsoluto.style.display = "block";
+
 
             }
         </script>
