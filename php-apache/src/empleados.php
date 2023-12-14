@@ -7,9 +7,30 @@
             echo("NoooOOO0O, como entraste bro");
             //header("Location: login.php"); 
         }*/
-        echo "Hola";
-        echo  $_SESSION['id_usuario'];
+        echo "Hola usuario: " .   $_SESSION['id_usuario'];
        
+    ?>
+
+    <?php 
+         function obtenerConexionBBDD(){
+            $ip = "pgsql:host=localhost;port=5432;dbname=practica3;";
+            $username = "postgres";
+            $password = "ajxy2381";
+            try {
+                $pdo = new PDO($ip, $username, $password);
+                $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                return $pdo;
+            } catch (PDOException $e) {
+                die('Error en la conexión a la base de datos: ' . $e->getMessage());
+            }
+        }
+
+        function obtenerEmpleados(){
+
+        }
+        function eliminarEmpleado(){
+            
+        }
     ?>
     <head></head>
 
@@ -21,6 +42,7 @@
 
         </div>
         <div>
+            <?php ?>
             <h2>Lista de empleados</h2>
         </div>
     </body>
