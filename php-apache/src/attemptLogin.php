@@ -1,6 +1,6 @@
-<?php 
-    
 
+<?php 
+    session_start();
 
     function validarCredenciales($usuario, $contra){
         $conexion = obtenerConexionBBDD();
@@ -12,8 +12,8 @@
 
         if($row){
             echo "Usuario válido";
-            $_SESSION['id_usuario'] = $row['id_usuario'];
-            header("Location: https://google.com"); 
+            $_SESSION['id_usuario'] = $row['id'];
+            header("Location: empleados.php"); 
             exit; 
         }else{
             echo "Credenciales inválidas";
