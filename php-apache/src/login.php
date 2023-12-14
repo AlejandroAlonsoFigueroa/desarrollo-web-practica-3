@@ -25,14 +25,14 @@
     </head>
     <body>
         <div>
-            <form>
+            <form action = "attemptLogin.php" method = "POST">
                 <div>
                     <div><p class = "label-login">Usuario</p></div>
-                    <input type = "text" />
+                    <input type = "text" name = "username"/>
                 </div>
                 <div>
                     <div class = "label-login"><p>Contraseña</p></div>
-                    <input type = "text" />
+                    <input type = "text" name = "password"/>
                 </div>
 
                 <div style = "margin-top: 10px;">
