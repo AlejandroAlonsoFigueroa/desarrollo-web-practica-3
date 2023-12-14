@@ -86,28 +86,29 @@
         <div style = "border: solid black 1px; width: fit-content;">
             <h1>Guardar empleado</h1>
 
-            <div>
+            <form action = "guardarEmpleado.php" method = "POST">
                 <div>
-                    <div><p>Clave</p></div>
-                    <div><input type = "text" name = "clave"/></div>
+                    <div>
+                        <div><p>Clave</p></div>
+                        <div><input type = "number" name = "clave" required /></div>
+                    </div>
+                    <div>
+                    <div><p>Nombre</p></div>
+                        <div><input type = "text" name = "nombre"required/></div>
+                    </div>
+                    <div>
+                        <div><p>Dirección</p></div>
+                        <div><input type = "text" name = "direccion" required/></div>
+                    </div>
+                    <div>
+                        <div><p>Teléfono</p></div>
+                        <div><input type = "text" name = "telefono" required/></div>
+                    </div>
                 </div>
-                <div>
-                <div><p>Nombre</p></div>
-                    <div><input type = "text" name = "nombre"/></div>
+                <div style = "margin-top: 10px;">
+                    <button type = "submit">Guardar empleado</button>
                 </div>
-                <div>
-                    <div><p>Dirección</p></div>
-                    <div><input type = "text" name = "direccion"/></div>
-                </div>
-                <div>
-                    <div><p>Teléfono</p></div>
-                    <div><input type = "text" name = "telefono"/></div>
-                </div>
-            </div>
-            <div style = "margin-top: 10px;">
-                <button>Guardar empleado</button>
-            </div>
-          
+            </form>
         </div>
         <div>
             <h2>Lista de empleados</h2>
