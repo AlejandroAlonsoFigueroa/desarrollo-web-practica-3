@@ -3,6 +3,31 @@
         <style>
             table, tr, td{
                 border: solid black 1px;
+                padding: 7px;
+            }
+            input{
+                all: unset;
+                border: solid black 1px;
+                padding: 7px;
+            }
+            button{
+                border: none;
+                margin: 0;
+                padding: 0;
+                background-color: 004481;
+                padding: 9px;
+                color: white;
+            }
+            *{
+                font-family: arial;
+            }
+
+            .boton-borrar{
+                background-color: red;
+                color: white;
+            }
+            p{
+                margin: 3px 0px;
             }
         </style>
     </head>
@@ -58,6 +83,32 @@
 
         <h1>Administrar a los empleados</h1>
 
+        <div style = "border: solid black 1px; width: fit-content;">
+            <h1>Guardar empleado</h1>
+
+            <div>
+                <div>
+                    <div><p>Clave</p></div>
+                    <div><input type = "text" name = "clave"/></div>
+                </div>
+                <div>
+                <div><p>Nombre</p></div>
+                    <div><input type = "text" name = "nombre"/></div>
+                </div>
+                <div>
+                    <div><p>Dirección</p></div>
+                    <div><input type = "text" name = "direccion"/></div>
+                </div>
+                <div>
+                    <div><p>Teléfono</p></div>
+                    <div><input type = "text" name = "telefono"/></div>
+                </div>
+            </div>
+            <div style = "margin-top: 10px;">
+                <button>Guardar empleado</button>
+            </div>
+          
+        </div>
         <div>
             <h2>Lista de empleados</h2>
         </div>
@@ -69,9 +120,19 @@
                         <td><?php echo $row['nombre']; ?></td>
                         <td><?php echo $row['direccion']; ?></td>
                         <td><?php echo $row['telefono']; ?></td>
+                        <td class = "boton-borrar"onclick = "borrar()">Borrar<?php  ?></td>
+                        <td>Editar<?php  ?></td>
                     </tr>
                 <?php }?> 
             </table>
         </div>
     </body>
+
+    <script>
+        function borrar(){
+            <?php echo "fsfd"?>
+            alert("Hola");
+         
+        }
+    </script>
 </html>
