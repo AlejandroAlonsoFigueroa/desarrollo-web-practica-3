@@ -121,19 +121,16 @@
                         <td><?php echo $row['nombre']; ?></td>
                         <td><?php echo $row['direccion']; ?></td>
                         <td><?php echo $row['telefono']; ?></td>
-                        <td class = "boton-borrar"onclick = "borrar()">Borrar<?php  ?></td>
+                        <td style = "padding: 0;">
+                            <form action = "borrarEmpleado.php" method = "POST">
+                                <input type = "hidden" name = "clave" value = "<?php echo $row['clave']; ?>"/>
+                                <button style = "padding: 0;"class = "boton-borrar" type = "submit">Eliminar</button>
+                            </form>
+                        </td>
                         <td>Editar<?php  ?></td>
                     </tr>
                 <?php }?> 
             </table>
         </div>
     </body>
-
-    <script>
-        function borrar(){
-            <?php echo "fsfd"?>
-            alert("Hola");
-         
-        }
-    </script>
 </html>
