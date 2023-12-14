@@ -127,7 +127,7 @@
                                 <button style = "padding: 0;"class = "boton-borrar" type = "submit">Eliminar</button>
                             </form>
                         </td>
-                        <td onClick = "mostrarFormActualizar()">Editar<?php  ?></td>
+                        <td onClick = "mostrarFormActualizar('<?php echo $row['clave']; ?>', '<?php echo $row['nombre']; ?>', '<?php echo $row['direccion']; ?>', '<?php echo $row['telefono']; ?>')">Editar<?php  ?></td>
                     </tr>
                 <?php }?> 
             </table>
@@ -140,19 +140,19 @@
                         <div>
                             <div>
                                 <div><p>Clave</p></div>
-                                <div><input type = "number" name = "clave" required /></div>
+                                <div><input id = "fClave" type = "number" name = "clave" required readonly/></div>
                             </div>
                             <div>
                             <div><p>Nombre</p></div>
-                                <div><input type = "text" name = "nombre"required/></div>
+                                <div><input id = "fNombre" type = "text" name = "nombre"required/></div>
                             </div>
                             <div>
                                 <div><p>Dirección</p></div>
-                                <div><input type = "text" name = "direccion" required/></div>
+                                <div><input id = "fDireccion" type = "text" name = "direccion" required/></div>
                             </div>
                             <div>
                                 <div><p>Teléfono</p></div>
-                                <div><input type = "text" name = "telefono" required/></div>
+                                <div><input id = "fTelefono" type = "text" name = "telefono" required/></div>
                             </div>
                         </div>
                         <div style = "margin-top: 10px;">
@@ -162,11 +162,18 @@
            </div> 
         </div>
         <script>
-            function mostrarFormActualizar(){
+            function mostrarFormActualizar(clave, nombre, direccion , telefono){
                 var contenedorAbsoluto = document.getElementById("contenedor-absoluto");
+                document.getElementById("fClave").value = clave;
+
+                document.getElementById("fNombre").value = nombre;
+                document.getElementById("fDireccion").value = direccion;
+                document.getElementById("fTelefono").value = telefono;
+              
+                
                 contenedorAbsoluto.style.display = "block";
 
-
+                
             }
         </script>
                 
