@@ -1,7 +1,7 @@
 <?php 
     echo "Vamos a actualizar";
     function obtenerConexionBBDD(){
-        $ip = "pgsql:host=172.17.0.2;port=5432;dbname=practica3;";
+        $ip = "pgsql:host=172.17.0.2;port=5432;dbname=postgres;";
         $username = "postgres";
         $password = "ajxy2381";
         try {
